@@ -17,11 +17,9 @@ function searchCountries () {
 
 function showCountriesList (resp) {
   countriesList.empty()
-    
-    var liCountry = $('<li class="country">')
-
+  
     resp.forEach(function (item) {
-    var ulCountry = $('<ul>')
+    var ulCountry = $('#countries')
         var smallApha2code = item.alpha2Code.toLowerCase()
         var img_url = '<img src="http://flags.fmcdn.net/data/flags/w580/' + smallApha2code + '.png" alt="Flag: ' + item.name + '">'
 
